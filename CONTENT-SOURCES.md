@@ -19,7 +19,7 @@ Imported with the user's instruction for this project.
 | Frog tee | https://www.instagram.com/goodbye.sunday.ph/p/DWWFuAHktFK/ |
 | Jacket and extra photos | https://www.instagram.com/goodbye.sunday.ph/p/DQ35rQ6EinE/ · https://www.instagram.com/goodbye.sunday.ph/p/DQ35l7WEnrS/ · https://www.instagram.com/goodbye.sunday.ph/p/DQ357ZiEicI/ · https://www.instagram.com/goodbye.sunday.ph/p/DQ352Z7kvSq/ · https://www.instagram.com/goodbye.sunday.ph/p/DQ35xddEktW/ |
 | Denim pouch | https://www.instagram.com/goodbye.sunday.ph/p/DQ35eaJEh69/ |
-| User-supplied studio pin | https://share.google/cjochuwpusl5zNk6n |
+| User-supplied studio pin | https://maps.app.goo.gl/dC8FULo3jpLNYU9T7 |
 
 Titles are descriptive labels for the imported images. Current product prices, sizes and stock are intentionally left for the shop or an approved admin to confirm. Photographs are bundled locally so the site does not rely on expiring Instagram image URLs.
 
