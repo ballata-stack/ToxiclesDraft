@@ -61,3 +61,4 @@
   font-display: swap;
   src: url(/fonts/font-8.woff2) format('woff2');
 }
+@font-face{font-family:'Toxicles Book K';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/toxicles-book-k.woff2) format('woff2');unicode-range:U+006B}
