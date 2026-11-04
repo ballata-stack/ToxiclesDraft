@@ -1,0 +1,1 @@
+export default function Loading(){return <main className="route-loading" role="status" aria-label="Loading page"><span className="loading-wordmark">Toxicles</span><div className="loading-line"/><div className="loading-tiles"><i/><i/><i/></div><span className="sr-only">Loading…</span></main>}

@@ -4,8 +4,9 @@ Traditional tattoo portfolio built with **Next.js**, ready for **GitHub → Verc
 
 - A realistic, swipeable tattoo portfolio book directly below the video. Hard covers, soft paper pages, turning shadows, desktop spreads and a phone layout. The book uses the admin-managed tattoo gallery.
 - Flash, tattoo, and Goodbye Sunday merch carousels, with touch and keyboard controls.
+- Optimized WebP images, smaller WOFF2 fonts, client-side navigation and a book engine that loads near the viewport. Reserved image and book space reduces layout jumps.
 - Extra product photos in a carousel inside the product view.
-- Coffee-stained paper texture, supplied three-horse logo, and an editable wordmark.
+- Subtly aged paper texture across a fluid, full-width layout, supplied three-horse logo, and an editable wordmark.
 - A reserved top video area. It stays empty until an admin uploads the film.
 - Events and merch pages, Instagram links, and the supplied studio map pin.
 - Google sign-in with an approved-email admin list.
@@ -42,7 +43,7 @@ Images support JPG, PNG, WebP and GIF up to 12 MB. Videos support MP4 and WebM u
 
 Merch photography is from the supplied Goodbye Sunday Instagram account. The website links to its official Shopee shop. Product names are short descriptive labels. Prices, sizes and current stock have not been guessed; the initial cards direct visitors to the shop. Admins can enter confirmed values later. This is an imported selection, not an automatic Instagram feed.
 
-The studio map uses the user-supplied pin at **8 Llanera Street, Manila, 1630 Metro Manila, Philippines**, coordinates **14.5259852, 121.0413044**. Both the shared link and embed location are editable.
+The studio map uses the user-supplied pin at **TOX Tattoo Studio, Unit A, Phase 4 AFPOVAI, 8 Llanera Street, Taguig, 1630 Metro Manila**, coordinates **14.5259852, 121.0413044**. Both the shared link and embed location are editable.
 
 All source links are listed in [CONTENT-SOURCES.md](./CONTENT-SOURCES.md). Font licenses are in `public/fonts/`. No stock tattoo work or invented product mockups are used in the initial galleries.
 

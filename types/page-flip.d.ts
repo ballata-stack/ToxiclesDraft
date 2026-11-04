@@ -10,6 +10,9 @@ declare module 'page-flip' {
   getOrientation():'portrait'|'landscape';
   flipNext(corner?:'top'|'bottom'):void;
   flipPrev(corner?:'top'|'bottom'):void;
+  getSettings():Record<string,number|string|boolean>;
+  getUI():{setOrientationStyle(orientation:'portrait'|'landscape'):void};
+  update():void;
   destroy():void;
  }
 }
