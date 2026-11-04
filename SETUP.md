@@ -64,7 +64,7 @@ Visit `https://YOUR-VERCEL-DOMAIN/admin`, choose **Continue with Google**, and s
 - **Flash designs / Tattoo gallery:** upload, remove, reorder and describe artwork. Tattoo gallery changes also update the portfolio book below the video.
 - **Events:** add dates, venues, images and event links.
 - **Merch:** update products, prices, sizes, stock labels, shop links and extra photos.
-- **Studio & links:** change the map pin, address and contact links.
+- **Studio & links:** change the map pin, embed URL, address and contact links.
 - **Admin access:** add or remove other approved Google emails. Access changes take effect immediately.
 
 Choose **Save changes** to publish content edits. The first save stores the bundled content as the shared version. Later deploys keep that saved content. If two admins edit at the same time, a stale save is rejected rather than overwriting the newer changes.

@@ -43,7 +43,7 @@ Images support JPG, PNG, WebP and GIF up to 12 MB. Videos support MP4 and WebM u
 
 Merch photography is from the supplied Goodbye Sunday Instagram account. The website links to its official Shopee shop. Product names are short descriptive labels. Prices, sizes and current stock have not been guessed; the initial cards direct visitors to the shop. Admins can enter confirmed values later. This is an imported selection, not an automatic Instagram feed.
 
-The studio map uses the user-supplied pin at **TOX Tattoo Studio, Unit A, Phase 4 AFPOVAI, 8 Llanera Street, Taguig, 1630 Metro Manila**, coordinates **14.5259852, 121.0413044**. Both the shared link and embed location are editable.
+The studio map targets the exact **TOX Tattoo Studio** business listing from [the supplied Google link](https://share.google/cjochuwpusl5zNk6n). Its Google Maps CID is `10933773881425842630`, at **14.5261084, 121.0413411**. The displayed address is **Unit A, Phase 4 AFPOVAI, 8 Llanera Street, Taguig, 1630 Metro Manila**. Admins can edit the shared link and the embed URL; clearing the embed URL uses the map search field.
 
 All source links are listed in [CONTENT-SOURCES.md](./CONTENT-SOURCES.md). Font licenses are in `public/fonts/`. No stock tattoo work or invented product mockups are used in the initial galleries.
 
