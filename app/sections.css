@@ -8,3 +8,10 @@
 .carousel-pagination{min-width:0;flex-shrink:1}.carousel-page-count{font-family:var(--condensed);font-size:12px;letter-spacing:1.5px;white-space:nowrap}.carousel-page-count>span{opacity:.45;margin:0 5px}.carousel-arrows{flex-shrink:0}.carousel-bottom{gap:16px}
 
 .art-dialog.untitled .dialog-content{grid-template-columns:1fr;min-height:0}.art-dialog.untitled .dialog-image{min-height:0;padding:24px}.art-dialog.untitled .dialog-image>img{max-height:62vh}.art-dialog.untitled .dialog-image.has-gallery .carousel-track img{height:min(58vh,500px)}.art-dialog.untitled .dialog-details{padding:22px 26px;flex-direction:row;align-items:center;flex-wrap:wrap;gap:16px}.art-dialog.untitled .dialog-details p{flex-basis:100%}.art-dialog.untitled .dialog-details .button{margin-left:auto}.art-dialog.untitled .dialog-details .text-link{margin-top:0}@media(max-width:760px){.art-dialog.untitled .dialog-image{padding:16px}.art-dialog.untitled .dialog-image>img{max-height:52vh}.art-dialog.untitled .dialog-details{padding:20px}.art-dialog.untitled .dialog-details .button{margin-left:0}}
+
+/* Keep navigation and booking within reach while the portfolio scrolls. */
+:root{--sticky-header-height:100px}
+html{scroll-padding-top:calc(var(--sticky-header-height) + 20px)}
+.header{position:sticky;top:0;z-index:80;width:100%;max-width:none;margin:0;padding-left:var(--site-gutter);padding-right:var(--site-gutter);background-color:var(--paper-light);background-image:url('/images/soft-paper.webp');background-size:100vw auto;background-position:center top;box-shadow:0 4px 16px #25282012}
+@media(max-width:1120px){:root{--sticky-header-height:88px}.header .nav.open{left:0;right:0;max-height:calc(100vh - var(--sticky-header-height));max-height:calc(100dvh - var(--sticky-header-height));overflow-y:auto;overscroll-behavior:contain}}
+@media(max-width:760px){:root{--sticky-header-height:82px}.header{background-size:auto 1000px}}
