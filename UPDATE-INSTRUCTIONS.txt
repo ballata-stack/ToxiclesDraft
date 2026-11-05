@@ -1,10 +1,14 @@
-Toxicles floating booking header update
+Toxicles mobile tagline update
 
-The top navigation stays visible while scrolling, including the Book a tattoo button. It keeps the paper styling on desktop and mobile. Section links leave room below the header.
+On phones, the hero tagline now uses two intentional lines:
+Traditional • Japanese
+Custom Tattoos by Tox
+
+The second line is smaller and softer. The desktop tagline stays on one line when space allows. The text remains editable in the admin settings.
 
 1. Extract this ZIP.
-2. In your GitHub repository, open the app folder.
-3. Upload the included app/sections.css to replace the existing app/sections.css. Keep the filename and folder path exactly.
-4. Commit the change, then let Vercel deploy the new version or choose Redeploy.
+2. Open the app folder in your GitHub repository.
+3. Upload the included site.tsx and sections.css into that app folder, replacing the two matching files.
+4. Commit the changes and deploy the updated version on Vercel.
 
-Only app/sections.css needs uploading for this update. Existing photos and admin setup need no changes. The previous blank-title styling and photo-opening animation are included in this stylesheet.
+This update includes the floating booking header and the photo-viewer animation. Your existing public folder needs no changes.
