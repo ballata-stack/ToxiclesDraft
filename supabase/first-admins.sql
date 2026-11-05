@@ -1,7 +1,10 @@
--- Run AFTER schema.sql. Replace the examples with the approved Google addresses.
--- Uncomment the INSERT and add as many approved primary admins as needed.
--- No access is granted until you run this with your real email addresses.
+-- Run AFTER schema.sql in the Supabase SQL Editor.
+-- Authorized primary admin for this project. Safe to rerun.
+-- Other existing admins are preserved.
 
--- insert into public.studio_admins(email,is_owner)
--- values ('first-admin@gmail.com',true), ('second-admin@gmail.com',true)
--- on conflict(email) do update set is_owner=true;
+insert into public.studio_admins(email,is_owner)
+values ('arbee.ballat@gmail.com',true)
+on conflict(email) do update set is_owner=true;
+
+-- After this succeeds, open /admin and sign in with this Google account.
+-- Additional admins can be added in Admin access after signing in.
