@@ -1,27 +1,32 @@
 # Toxicles
 
-Traditional tattoo portfolio built with **Next.js**, ready for **GitHub → Vercel**.
+Tattoo and artwork portfolio built with Next.js for **GitHub → Vercel**.
 
-- A realistic, swipeable tattoo portfolio book directly below the video. Hard covers, soft paper pages, turning shadows, desktop spreads and a phone layout. The book uses the admin-managed tattoo gallery.
-- Flash, tattoo, and Goodbye Sunday merch carousels, with touch and keyboard controls.
-- Optimized WebP images, smaller WOFF2 fonts, client-side navigation and a book engine that loads near the viewport. Reserved image and book space reduces layout jumps.
-- Extra product photos in a carousel inside the product view.
-- Subtly aged paper texture across a fluid, full-width layout, supplied three-horse logo, and an editable wordmark.
-- A reserved top video area. It stays empty until an admin uploads the film.
-- Events and merch pages, Instagram links, and the supplied studio map pin.
-- Google sign-in with an approved-email admin list.
-- Shared content and uploads stored in Supabase, rather than Vercel's temporary filesystem.
+Homepage order: **Tattoo Book → Flash Designs → Artworks → The Studio → Shop → On the Road → FAQ**.
 
-## Start here
+Tagline: **Traditional • Japanese • Custom Tattoos by Tox**
 
-Read **[SETUP.md](./SETUP.md)** for the deployment steps. The public website works before Supabase is configured; the editor stays locked until setup is complete.
+- Full-width aged ivory paper, the supplied three-horse logo, and the original blackletter style with a clearer lowercase k.
+- Swipeable tattoo book and carousels with touch, keyboard and button controls.
+- **48 supplied photos:** 13 flash designs and 26 artworks.
+- Artworks filters: **Paintings & Drawings**, **Objects**. Flash has no subcategories.
+- Each helmet and lucky cat has its own photo gallery. Photos open with a short fade and zoom, respecting reduced-motion preferences.
+- Studio photos and the preparation video are reserved in **The Studio** until supplied.
+- Shop filters: **Original Artworks**, **Prints**, **Merch**, including the Goodbye Sunday Frog tee.
+- Editable events, FAQ, logo, wordmark, photos, video, prices, links and map.
+- Booking form with the requested fields and up to four reference photos.
+- Private booking inbox for approved Google admins, with New / Contacted / Closed statuses.
+
+## Start and deploy
+
+Read **[SETUP.md](./SETUP.md)** for deployment and backend setup.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Open http://localhost:3000. Node.js 22.13 or later is required.
 
 ```sh
 npm run typecheck
@@ -29,35 +34,38 @@ npm test
 npm run build
 ```
 
-Node.js 22.13 or later is required. Vercel detects this as a Next.js project. `vercel.json` uses `npm ci` and `npm run build`.
+The public portfolio works before Supabase is configured. Admin editing stays locked, and booking submission stays disabled with an Instagram contact link until its backend is configured.
 
-## Admin editor
+## Admin editing
 
-Visit `/admin`. Only verified Google accounts in `studio_admins` can edit the site. Add the first primary admin emails using the Supabase SQL editor. Those admins can add or remove other admins in the editor. Public visitors do not need an account.
+Visit /admin and choose **Continue with Google**. Only verified Google accounts on the approved-email list can edit or view bookings. Visitors see the normal website without a sign-in prompt.
 
-Admins can replace the logo, wordmark, video, cover image, artwork and tattoo photos; add product photos; edit prices, availability, sizes, events, links, and the studio map. Edits are drafts until **Save changes** is selected. A revision check rejects a stale save if another admin has changed the content.
+Being signed into Google in the browser does not silently grant access. Admins sign in once through this website; their website session is then reused while valid. Multiple approved admins are supported.
 
-Images support JPG, PNG, WebP and GIF up to 12 MB. Videos support MP4 and WebM up to 40 MB, or a direct HTTPS URL. Uploads go directly to the protected media bucket. Files removed from a gallery stop appearing on the site; existing stored bytes remain in the bucket until removed through Supabase Storage.
+Content changes publish when **Save changes** is selected. A revision check rejects stale saves. Admin access changes and booking-status updates take effect immediately.
+
+Admin image uploads accept JPG, PNG, WebP and GIF up to 12 MB. Videos accept MP4/WebM up to 40 MB or a direct HTTPS URL. Files removed from the site remain in Supabase Storage until removed there.
+
+## Bookings
+
+Requests go to the private admin inbox. They do **not** automatically confirm appointments or send notification emails. Admins contact clients using the supplied details. Preferred times use Manila time.
+
+Reference uploads accept four JPG/PNG/WebP files, each originally under 12 MB. The browser prepares smaller JPEG copies before sending them. References live in a private bucket; approved admins receive temporary viewing links.
+
+The booking endpoint needs a **server-only SUPABASE_SERVICE_ROLE_KEY**. Never prefix it with NEXT_PUBLIC_, commit it to GitHub, or place it in browser code.
 
 ## Included content
 
-Merch photography is from the supplied Goodbye Sunday Instagram account. The website links to its official Shopee shop. Product names are short descriptive labels. Prices, sizes and current stock have not been guessed; the initial cards direct visitors to the shop. Admins can enter confirmed values later. This is an imported selection, not an automatic Instagram feed.
+Images are bundled locally, with smaller gallery thumbnails and larger detail images. This is an imported selection, not an automatic Instagram feed. See [CONTENT-SOURCES.md](./CONTENT-SOURCES.md).
 
-The studio map targets the exact **TOX Tattoo Studio** business listing from [the supplied Google link](https://maps.app.goo.gl/dC8FULo3jpLNYU9T7). Its Google Maps CID is `10933773881425842630`, at **14.5261084, 121.0413411**. The displayed address is **Unit A, Phase 4 AFPOVAI, 8 Llanera Street, Taguig, 1630 Metro Manila**. Admins can edit the shared link and the embed URL; clearing the embed URL uses the map search field.
+Prices, sizes and stock have not been guessed. Admins can enter confirmed values; initial merch cards link to the official Goodbye Sunday shop. Studio photos, video, event dates and FAQ answers await the artist's content.
 
-All source links are listed in [CONTENT-SOURCES.md](./CONTENT-SOURCES.md). Font licenses are in `public/fonts/`. No stock tattoo work or invented product mockups are used in the initial galleries.
+The footer uses the exact [TOX Tattoo Studio map link](https://maps.app.goo.gl/dC8FULo3jpLNYU9T7) and a mini map of the same business listing. Address: **Unit A, Phase 4 AFPOVAI, 8 Llanera Street, Taguig, 1630 Metro Manila**.
 
-## Architecture
+If the website already has saved Supabase content, redeploying preserves it. Use the optional **supabase/import-current-photos.sql** to merge the supplied photos into that saved version.
 
-- Next.js App Router on Vercel; standard npm scripts and `package-lock.json`.
-- Supabase Google OAuth with PKCE and server-verified user identity.
-- PostgreSQL row-level security for admin membership, content and uploads.
-- Atomic content-save function with optimistic revisions.
-- Same-origin checks for write and sign-out endpoints.
-- Public, read-only gallery access. There is no service-role key in this project.
+## Verification
 
-The ChatGPT-hosted preview is separate from this portable project. This version has no ChatGPT login requirement or Cloudflare-specific runtime dependencies.
+Production build, TypeScript and database/API checks were run locally. Tests cover admin authorization, row-level security, shared saves, media access, private bookings, request validation, failed-upload cleanup and submission limits.
 
-## Verification status
-
-The production build and the PostgreSQL access/data tests pass. The tests run the actual RLS policies, save functions, membership rules, upload policy and server request guards against isolated fixtures. The page layout was inspected in the browser, and the shared flipbook renderer was separately checked with working page turns. This preview environment did not initialize Next.js browser interactions, including a minimal diagnostic page, so full interactive browser verification remains to be completed on Vercel. Live Google OAuth also needs the Supabase and Google configuration described in `SETUP.md` before it can be verified.
+Actual React components were checked in an isolated browser fixture for category filters, grouped galleries and the opening animation. The complete Next.js preview did not hydrate reliably in this environment. Final checks of Google sign-in, shared persistence and live booking delivery need the configured Vercel deployment. Temporary fixtures and mock responses are excluded from the project.

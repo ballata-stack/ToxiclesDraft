@@ -1,3 +1,3 @@
-import {readContent} from '../lib/server';import {Site} from './site';
+import {PublicPage} from './site-page';
 export const dynamic='force-dynamic';
-export default async function Home(){const {content}=await readContent();return <Site content={content} page="home"/>;}
+export default function Home(){return <PublicPage page="home"/>;}

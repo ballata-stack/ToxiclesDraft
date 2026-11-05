@@ -2,6 +2,22 @@
 
 Imported with the user's instruction for this project.
 
+## Supplied photo archives — 5 November 2026
+
+| Archive | Photos | Placement |
+| --- | ---: | --- |
+| Flash Designs.zip | 13 | Flash Designs; no subcategories |
+| Artworks - Paintings & Drawings.zip | 15 | Paintings & Drawings |
+| Artworks - Object.zip | 7 | Objects; seven distinct items |
+| Artworks - Object - Helmet1.zip | 4 | Traditional Flash Helmet gallery |
+| Artworks - Object  - Helmet2.zip | 3 | Tiger & Oni Helmet gallery |
+| Artworks - Object - Lucky Cay1.zip | 4 | Blue & White Lucky Cat gallery |
+| Artworks - Object - Lucky Cat2.zip | 2 | Gold & Teal Lucky Cat gallery |
+
+All **48 photos** are included as 13 flash items and 26 artworks. The archive spelling “Lucky Cay1” was treated as Lucky Cat 1. Descriptive titles were assigned from the visible artwork as requested; admins can rename them. Files are auto-rotated and optimized as WebP, with smaller gallery thumbnails. The first two original flash sheets now use the supplied higher-resolution versions; Skull & Swallow is in Paintings & Drawings.
+
+## Original imported selection
+
 | Content | Original source |
 | --- | --- |
 | Main three-horse logo | User-supplied image |

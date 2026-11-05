@@ -2,90 +2,120 @@
 
 ## 1. Upload to GitHub
 
-1. Extract `toxicles-vercel.zip`.
+1. Extract toxicles-vercel.zip.
 2. Create a GitHub repository.
-3. Upload the **contents of the `toxicles-vercel` folder**. `package.json`, `app`, `public`, and `supabase` should be at the repository root, rather than inside another project folder.
-4. Include `.gitignore` and `.env.example`. Do not upload `node_modules` or any real `.env.local` file.
+3. Upload the **contents of the toxicles-vercel folder**. package.json, app, public and supabase must be at the repository root.
+4. Include .gitignore and .env.example. Do not upload node_modules or a filled .env.local file.
 
-## 2. Deploy the public website
+## 2. Deploy the public portfolio
 
-1. In Vercel, choose **Add New → Project** and import the repository.
-2. Keep **Framework Preset: Next.js**. Leave the Output Directory at its default.
-3. Deploy. The gallery, merch, video placeholder, events and map work immediately.
+In Vercel, choose **Add New → Project**, import the repository, keep **Framework Preset: Next.js** and the default Output Directory, then deploy.
 
-The admin page remains locked until the following setup is complete.
+The portfolio, supplied photos, merch links and map work immediately. Admin editing and booking submission need the setup below.
 
-## 3. Create the content backend
+## 3. Create the backend
 
-1. Create a Supabase project.
-2. Open its **SQL Editor** and run all of `supabase/schema.sql`.
-3. Open `supabase/first-admins.sql`. Replace the example emails with the approved **Google account email addresses**, uncomment the INSERT, and run it in the SQL Editor.
-4. Include every initial primary admin you want. This grants editing access, so use the exact intended addresses.
+In a Supabase project's **SQL Editor**, run these files in order:
 
-The schema creates the content table, admin list, media bucket, and access policies. It does not grant anyone access by default.
+1. **supabase/schema.sql** — content, approved admins, public media and access policies.
+2. **supabase/bookings.sql** — private booking requests, reference photos and submission limits.
+3. **supabase/first-admins.sql** — replace example emails with the intended Google email addresses, uncomment the INSERT and run it.
+
+Include every initial primary admin you want. The schema grants no admin access by default. The first two scripts can be rerun when adding bookings to an existing project.
 
 ## 4. Enable Google sign-in
 
-1. In Supabase, open **Authentication → Sign In / Providers → Google**.
-2. Copy the callback URL shown there.
-3. In Google Cloud, create a **Web application** OAuth client. Add the exact Supabase callback URL as an **Authorized redirect URI**. Use your Vercel site origin as an authorized JavaScript origin if the Google configuration asks for one.
-4. Configure the OAuth consent screen. If the Google app is in testing mode, add all approved admins as test users.
-5. Put the Google Client ID and Client Secret in the **Supabase Google provider settings**, then enable Google. Keep other sign-in providers disabled unless you deliberately add support for them.
-6. In Supabase **Authentication → URL Configuration**, set the **Site URL** to your Vercel website origin.
-7. Add your exact `https://YOUR-VERCEL-DOMAIN/auth/callback` to Supabase's allowed redirect URLs. For local development, also add `http://localhost:3000/auth/callback`.
+1. In Supabase, open **Authentication → Sign In / Providers → Google** and copy its callback URL.
+2. In Google Cloud, create a **Web application** OAuth client.
+3. Add the Supabase callback as an **Authorized redirect URI**. Use your Vercel origin as an authorized JavaScript origin if asked.
+4. Configure the consent screen. In testing mode, add all approved admins as test users.
+5. Enter the Google Client ID and Client Secret in **Supabase's Google provider settings**, then enable Google.
+6. In Supabase **Authentication → URL Configuration**, set **Site URL** to your Vercel origin.
+7. Add https://YOUR-VERCEL-DOMAIN/auth/callback to the allowed redirect URLs. For local development, add http://localhost:3000/auth/callback.
 
-There are two different redirect settings:
-
-| Setting | URL to put there |
+| Setting | URL |
 | --- | --- |
-| Google Cloud → Authorized redirect URI | The callback copied from Supabase's Google provider panel |
-| Supabase → Allowed redirect URLs | Your Vercel domain followed by `/auth/callback` |
+| Google Cloud → Authorized redirect URI | Callback copied from Supabase's Google provider panel |
+| Supabase → Allowed redirect URLs | Your Vercel origin followed by /auth/callback |
 
-Use the actual domains, with matching spelling and HTTPS. Add a custom domain's callback too if you switch domains later.
+Use the actual domains with HTTPS. Add a custom domain's callback if you switch later.
 
-## 5. Add two Vercel environment variables
+## 5. Add Vercel environment variables
 
-Copy the project URL and publishable key from Supabase's project API settings:
+Copy the values from Supabase's project API settings:
 
-| Variable | Value |
+| Variable | Value | Visibility |
+| --- | --- | --- |
+| NEXT_PUBLIC_SUPABASE_URL | Supabase project URL | Public |
+| NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY | Supabase publishable key | Public; database policies restrict access |
+| SUPABASE_SERVICE_ROLE_KEY | Supabase service-role key | **Server only; needed for booking submissions** |
+
+Set them in **Vercel → Project → Settings → Environment Variables**, select Production and redeploy. Configure stable Preview deployments separately if used.
+
+Never expose the service-role key through a NEXT_PUBLIC_ name, GitHub, a public file or a client component. The Google Client Secret belongs only in Supabase's Google provider settings.
+
+For local development, copy .env.example to .env.local and fill in the same values.
+
+## 6. Open the private editor
+
+Visit https://YOUR-VERCEL-DOMAIN/admin, choose **Continue with Google**, and select an approved account.
+
+| Editor section | What it changes |
 | --- | --- |
-| `NEXT_PUBLIC_SUPABASE_URL` | Your Supabase project URL |
-| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Your Supabase publishable key |
+| Brand | Logo, optional wordmark, tagline and public links |
+| Tattoo Book | Completed tattoos and book/gallery order |
+| Flash Designs | Images, availability and prices; no subcategories |
+| Artworks | Paintings & Drawings / Objects, cover photos and extra galleries |
+| The Studio | Studio photos, preparation video, poster, address and map |
+| Shop | Original Artworks / Prints / Merch, prices, sizes, stock, links and extra photos |
+| On the Road | Events, dates, venues, photos and links |
+| FAQ | Questions, answers and order |
+| Booking requests | Private requests, photos and New / Contacted / Closed statuses |
+| Admin access | Approved Google emails; primary admins remain protected |
 
-Add them in **Vercel → Project → Settings → Environment Variables**, select Production, and redeploy. If you enable a stable Preview domain, configure its redirect URL and environment variables too.
+Choose **Save changes** to publish content edits. The first save stores the bundled content. Later deployments keep that saved version. If another admin saves first, reload and reapply your draft.
 
-These public values are protected by the database policies. Do not use the service-role or secret key here. The Google Client Secret belongs in Supabase's provider settings, not in GitHub or browser code.
+### Import photos into an already-saved website
 
-## 6. Open the editor
+If you have never saved content through the editor, the supplied photos appear automatically.
 
-Visit `https://YOUR-VERCEL-DOMAIN/admin`, choose **Continue with Google**, and select an approved account.
+If you have saved an earlier version:
 
-- **Brand & video:** replace the emblem or wordmark and add the preparation film.
-- **Flash designs / Tattoo gallery:** upload, remove, reorder and describe artwork. Tattoo gallery changes also update the portfolio book below the video.
-- **Events:** add dates, venues, images and event links.
-- **Merch:** update products, prices, sizes, stock labels, shop links and extra photos.
-- **Studio & links:** change the map pin, embed URL, address and contact links.
-- **Admin access:** add or remove other approved Google emails. Access changes take effect immediately.
+1. Deploy this updated code and its public/images/uploads folder.
+2. Finish any open admin drafts.
+3. Review and run **supabase/import-current-photos.sql** in Supabase's SQL Editor.
+4. Reload the website and editor.
 
-Choose **Save changes** to publish content edits. The first save stores the bundled content as the shared version. Later deploys keep that saved content. If two admins edit at the same time, a stale save is rejected rather than overwriting the newer changes.
+The script adds missing supplied flash/artwork photos, groups the helmet/cat galleries and replaces the older bundled copies of the same flash images. It moves the old bundled Skull & Swallow image into Artworks. It preserves other uploaded content, settings, prices, products, events and memberships. Rerunning it does not duplicate photos. It increments the content revision if the merge changes saved data.
 
-## If something needs fixing
+## 7. Check the live site
+
+- Test the public pages, carousel controls and tattoo book on desktop and a phone.
+- Sign into /admin, save a small change, and check it in a separate public browser window.
+- Submit a test booking with a reference photo. Open Booking requests, view the photo and change its status.
+- Confirm an unapproved Google account cannot access the editor or booking data.
+
+**No automatic booking email notification is sent.** Admins must check the inbox and contact clients. Preferred dates/times are requests, not confirmed appointments. References are private; viewing links expire after an hour, so use Refresh to renew them.
+
+## Troubleshooting
 
 | Symptom | Check |
 | --- | --- |
-| Admin setup is pending | Add both Vercel variables and redeploy. |
-| Google shows redirect mismatch | Compare the two redirect settings in step 4. |
-| Google blocks a test user | Add the admin to the Google consent screen's test users, or publish the OAuth app. |
-| Account is not on the admin list | Check the exact email in `studio_admins`, and use the intended Google account. |
-| Gallery cannot load after configuration | Run `schema.sql` and check the Supabase project URL/key. Existing content is not silently replaced with defaults after a backend error. |
-| Upload is rejected | Check admin access, the bucket policies, file type, and the size limit. |
-| Another admin saved changes | Keep a copy of your intended edits, reload the page, then reapply and save. |
+| Admin setup is pending | Add both public Supabase variables and redeploy. |
+| Booking submission is disabled | Add all three variables and redeploy. |
+| Booking cannot save | Run bookings.sql; check the URL and server-only key belong to the same project. |
+| Google redirect mismatch | Compare both redirect settings in step 4. |
+| Google blocks a test user | Add the admin as a consent-screen test user or publish the OAuth app. |
+| Account is not approved | Check the exact email in studio_admins and choose that account. |
+| Photos stay old after redeploy | Saved content takes precedence; use the optional import SQL. |
+| Public content cannot load | Run schema.sql and check the URL/publishable key. Backend errors do not overwrite saved content. |
+| Another admin saved | Reload, then reapply and save your intended edits. |
+| Private reference link expired | Refresh the booking inbox. |
+| Too many booking requests | Wait before retrying; submissions are limited to five per hour per network fingerprint. |
 
-## Official references
+## Reference links
 
-- [Deploying Next.js on Vercel](https://vercel.com/docs/frameworks/full-stack/nextjs)
-- [Vercel environment variables](https://vercel.com/docs/environment-variables)
+- [Next.js on Vercel](https://vercel.com/docs/frameworks/full-stack/nextjs)
 - [Supabase Google sign-in](https://supabase.com/docs/guides/auth/social-sign-in/auth-google)
 - [Supabase redirect URLs](https://supabase.com/docs/guides/auth/redirect-urls)
-- [Supabase server-side authentication](https://supabase.com/docs/guides/auth/server-side/creating-a-client)
 - [Supabase Storage access control](https://supabase.com/docs/guides/storage/security/access-control)
