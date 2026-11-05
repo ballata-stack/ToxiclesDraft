@@ -1,14 +1,10 @@
-Toxicles mobile tagline update
+Toxicles dark Artworks section update
 
-On phones, the hero tagline now uses two intentional lines:
-Traditional • Japanese
-Custom Tattoos by Tox
-
-The second line is smaller and softer. The desktop tagline stays on one line when space allows. The text remains editable in the admin settings.
+The Artworks section now uses a full-width charcoal-green background between Flash Designs and The Studio. Cream headings, clear category filters and warm paper photo frames create a visual break in the coffee-aged paper background. The same treatment is used on the Artworks page.
 
 1. Extract this ZIP.
 2. Open the app folder in your GitHub repository.
-3. Upload the included site.tsx and sections.css into that app folder, replacing the two matching files.
-4. Commit the changes and deploy the updated version on Vercel.
+3. Upload the included sections.css to replace app/sections.css.
+4. Commit the change and deploy the updated version on Vercel.
 
-This update includes the floating booking header and the photo-viewer animation. Your existing public folder needs no changes.
+Only app/sections.css needs uploading. The stylesheet includes the floating booking header, compact mobile tagline styles and photo-opening animation from the previous updates.
