@@ -8,7 +8,7 @@ Tagline: **Traditional • Japanese • Custom Tattoos by Tox**
 
 - Full-width aged ivory paper, the supplied three-horse logo, and the original blackletter style with a clearer lowercase k.
 - Swipeable tattoo book and carousels with touch, keyboard and button controls.
-- **48 supplied photos:** 13 flash designs and 26 artworks.
+- **48 supplied photos:** 13 flash designs and 26 artworks. Photo and product titles are blank until official names are supplied; admins can add them later.
 - Artworks filters: **Paintings & Drawings**, **Objects**. Flash has no subcategories.
 - Each helmet and lucky cat has its own photo gallery. Photos open with a short fade and zoom, respecting reduced-motion preferences.
 - Studio photos and the preparation video are reserved in **The Studio** until supplied.

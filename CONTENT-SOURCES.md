@@ -14,7 +14,7 @@ Imported with the user's instruction for this project.
 | Artworks - Object - Lucky Cay1.zip | 4 | Blue & White Lucky Cat gallery |
 | Artworks - Object - Lucky Cat2.zip | 2 | Gold & Teal Lucky Cat gallery |
 
-All **48 photos** are included as 13 flash items and 26 artworks. The archive spelling “Lucky Cay1” was treated as Lucky Cat 1. Descriptive titles were assigned from the visible artwork as requested; admins can rename them. Files are auto-rotated and optimized as WebP, with smaller gallery thumbnails. The first two original flash sheets now use the supplied higher-resolution versions; Skull & Swallow is in Paintings & Drawings.
+All **48 photos** are included as 13 flash items and 26 artworks. The archive spelling “Lucky Cay1” was treated as Lucky Cat 1. Public photo and product titles are blank while official names are pending; admins can add them later. Files are auto-rotated and optimized as WebP, with smaller gallery thumbnails. The first two original flash sheets now use the supplied higher-resolution versions; Skull & Swallow is in Paintings & Drawings.
 
 ## Original imported selection
 
@@ -37,7 +37,7 @@ All **48 photos** are included as 13 flash items and 26 artworks. The archive sp
 | Denim pouch | https://www.instagram.com/goodbye.sunday.ph/p/DQ35eaJEh69/ |
 | User-supplied studio pin | https://maps.app.goo.gl/dC8FULo3jpLNYU9T7 |
 
-Titles are descriptive labels for the imported images. Current product prices, sizes and stock are intentionally left for the shop or an approved admin to confirm. Photographs are bundled locally so the site does not rely on expiring Instagram image URLs.
+Labels in this source list identify the images for reference; they are not displayed as official titles. Current product prices, sizes and stock are intentionally left for the shop or an approved admin to confirm. Photographs are bundled locally so the site does not rely on expiring Instagram image URLs.
 
 The wordmark currently uses UnifrakturCook. Upload a custom wordmark in the admin editor to replace it with the intended font reference. Font licenses are bundled in `public/fonts/`.
 

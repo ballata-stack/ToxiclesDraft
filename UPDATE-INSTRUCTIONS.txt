@@ -1,0 +1,23 @@
+Toxicles photo-title update
+
+Photo and product titles are blank until official names are supplied. The photo viewer includes the fade-and-zoom opening animation. Official names can be added later in the admin editor.
+
+1. Extract this ZIP.
+2. Copy the included app, components, lib and supabase folders, plus README.md and CONTENT-SOURCES.md, into the ROOT of your existing Toxicles project. Merge folders and replace the matching files; keep the rest of the project.
+3. Upload these changed files to their matching paths in your GitHub repository and commit.
+4. Redeploy the connected project on Vercel.
+
+Your public folder and photo files are unchanged. No photo uploads or new environment variables are needed for this update. Admin setup can wait.
+
+This update changes the bundled content. If you already saved custom content in Supabase, that saved version still takes precedence; existing custom titles can be cleared through the admin editor later.
+
+Changed files:
+- lib/content.ts
+- app/site.tsx
+- app/sections.css
+- components/tattoo-book.tsx
+- lib/book-pages.ts
+- app/admin/editor.tsx
+- supabase/import-current-photos.sql
+- README.md
+- CONTENT-SOURCES.md

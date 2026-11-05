@@ -34,13 +34,13 @@ export function AdminEditor({initial,revision:initialRevision,email,signOut}:{in
  }
 
  function add(group:Collection){const id=crypto.randomUUID();update(d=>{
-  if(group==='flash')d.flash.push({id,title:'New flash design',image:'',category:'Flash sheets',status:'Ask Tox',price:null,description:'',source:''});
-  if(group==='work')d.work.push({id,title:'New tattoo',image:'',description:'',source:''});
-  if(group==='artworks')d.artworks.push({id,title:'New artwork',image:'',category:'Paintings & Drawings',description:'',source:'',gallery:[]});
-  if(group==='studioPhotos')d.studioPhotos.push({id,title:'Studio photo',image:'',description:''});
+  if(group==='flash')d.flash.push({id,title:'',image:'',category:'Flash sheets',status:'Ask Tox',price:null,description:'',source:''});
+  if(group==='work')d.work.push({id,title:'',image:'',description:'',source:''});
+  if(group==='artworks')d.artworks.push({id,title:'',image:'',category:'Paintings & Drawings',description:'',source:'',gallery:[]});
+  if(group==='studioPhotos')d.studioPhotos.push({id,title:'',image:'',description:''});
   if(group==='faqs')d.faqs.push({id,question:'New question',answer:''});
   if(group==='events')d.events.push({id,title:'New event',location:'',date:'',endDate:'',description:'',image:'',url:'',status:'Upcoming'});
-  if(group==='merch')d.merch.push({id,title:'New product',image:'',category:'Merch',description:'',price:null,status:'Coming soon',sizes:'',orderUrl:'',gallery:[],source:'',mockup:'none'});
+  if(group==='merch')d.merch.push({id,title:'',image:'',category:'Merch',description:'',price:null,status:'Coming soon',sizes:'',orderUrl:'',gallery:[],source:'',mockup:'none'});
  })}
  function move(group:Collection,index:number,direction:number){update(d=>{const array=d[group] as any[];[array[index],array[index+direction]]=[array[index+direction],array[index]]})}
  const tabs:{key:Tab;title:string;icon:ReactNode}[]=[
@@ -53,9 +53,9 @@ export function AdminEditor({initial,revision:initialRevision,email,signOut}:{in
  const collectionNames:Record<Collection,string>={flash:'design',work:'tattoo',artworks:'artwork',studioPhotos:'studio photo',merch:'product',events:'event',faqs:'question'};
  function renderCollection(group:Collection){return <>
   <div className="collection-toolbar"><span>{content[group].length} items</span><button className="button" onClick={()=>add(group)}><Plus size={16}/>Add {collectionNames[group]}</button></div>
-  {content[group].map((item,index)=>{const i=item as any;return <details key={item.id} className="editor-item"><summary>{i.image?<img src={i.image} alt=""/>:<div className="item-placeholder">{group==='faqs'?<HelpCircle size={20}/>:<Images size={20}/>}</div>}<div><strong>{i.title||i.question}</strong><small>{group==='flash'?(i.status||'Flash design'):i.category||i.status||collectionNames[group]}</small></div><span>EDIT +</span></summary><div className="item-edit">
+  {content[group].map((item,index)=>{const i=item as any;return <details key={item.id} className="editor-item"><summary>{i.image?<img src={i.image} alt=""/>:<div className="item-placeholder">{group==='faqs'?<HelpCircle size={20}/>:<Images size={20}/>}</div>}<div><strong>{i.title||i.question||collectionNames[group]+' '+String(index+1).padStart(2,'0')}</strong><small>{group==='flash'?(i.status||'Flash design'):i.category||i.status||collectionNames[group]}</small></div><span>EDIT +</span></summary><div className="item-edit">
    {group==='faqs'?<><Field label="Question" value={i.question} onChange={v=>itemValue(group,index,'question',v)}/><Field label="Answer" value={i.answer} onChange={v=>itemValue(group,index,'answer',v)} multiline/></>:<>
-    <Field label="Title / item name" value={i.title} onChange={v=>itemValue(group,index,'title',v)}/>
+    <Field label={group==='events'?'Title / item name':'Title / item name (optional)'} value={i.title} onChange={v=>itemValue(group,index,'title',v)}/>
     <MediaUploader upload={upload} uploading={uploads>0} label={group==='studioPhotos'?'Studio photo':'Main photo'} value={i.image} onChange={v=>itemValue(group,index,'image',v)}/>
     {group==='flash'&&<Select label="Availability" value={i.status} options={['Ask Tox','Available','Claimed']} onChange={v=>itemValue(group,index,'status',v)}/>}
     {group==='artworks'&&<Select label="Category" value={i.category} options={[...artworkCategories]} onChange={v=>itemValue(group,index,'category',v)}/>}

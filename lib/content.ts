@@ -24,7 +24,7 @@ export const defaultContent:SiteContent={
  flash:[
  {
   "id": "flash-01",
-  "title": "Classic Trad Flash",
+  "title": "",
   "image": "/images/uploads/flash-design-01.webp",
   "category": "Flash sheets",
   "status": "Ask Tox",
@@ -34,7 +34,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "flash-02",
-  "title": "Portraits & Roses",
+  "title": "",
   "image": "/images/uploads/flash-design-02.webp",
   "category": "Flash sheets",
   "status": "Ask Tox",
@@ -44,7 +44,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "flash-03",
-  "title": "Portrait Collection",
+  "title": "",
   "image": "/images/uploads/flash-design-03.webp",
   "category": "Flash sheets",
   "status": "Ask Tox",
@@ -54,7 +54,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "flash-04",
-  "title": "Geisha Portraits",
+  "title": "",
   "image": "/images/uploads/flash-design-04.webp",
   "category": "Flash sheets",
   "status": "Ask Tox",
@@ -64,7 +64,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "flash-05",
-  "title": "Lotus & Masks",
+  "title": "",
   "image": "/images/uploads/flash-design-05.webp",
   "category": "Flash sheets",
   "status": "Ask Tox",
@@ -74,7 +74,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "flash-06",
-  "title": "Yokai & Trad Classics",
+  "title": "",
   "image": "/images/uploads/flash-design-06.webp",
   "category": "Flash sheets",
   "status": "Ask Tox",
@@ -84,7 +84,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "flash-07",
-  "title": "Black & Grey Pin-ups",
+  "title": "",
   "image": "/images/uploads/flash-design-07.webp",
   "category": "Flash sheets",
   "status": "Ask Tox",
@@ -94,7 +94,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "flash-08",
-  "title": "Colour Creature Flash",
+  "title": "",
   "image": "/images/uploads/flash-design-08.webp",
   "category": "Flash sheets",
   "status": "Ask Tox",
@@ -104,7 +104,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "flash-09",
-  "title": "Black & Grey Classics",
+  "title": "",
   "image": "/images/uploads/flash-design-09.webp",
   "category": "Flash sheets",
   "status": "Ask Tox",
@@ -114,7 +114,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "flash-10",
-  "title": "Moto Portraits",
+  "title": "",
   "image": "/images/uploads/flash-design-10.webp",
   "category": "Flash sheets",
   "status": "Ask Tox",
@@ -124,7 +124,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "flash-11",
-  "title": "Japanese Masks",
+  "title": "",
   "image": "/images/uploads/flash-design-11.webp",
   "category": "Flash sheets",
   "status": "Ask Tox",
@@ -134,7 +134,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "flash-12",
-  "title": "Daggers & Beasts",
+  "title": "",
   "image": "/images/uploads/flash-design-12.webp",
   "category": "Flash sheets",
   "status": "Ask Tox",
@@ -144,7 +144,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "flash-13",
-  "title": "Tropical Trad Flash",
+  "title": "",
   "image": "/images/uploads/flash-design-13.webp",
   "category": "Flash sheets",
   "status": "Ask Tox",
@@ -153,11 +153,11 @@ export const defaultContent:SiteContent={
   "source": ""
  }
 ],
- work:[{id:'work-01',title:'Scorpion',image:'/images/DeyvG4rk-Ye.webp',description:'Scorpion · black & grey',source:'https://www.instagram.com/toxicles/p/DeyvG4rk-Ye/'},{id:'work-02',title:'Tiger & portraits',image:'/images/DeULc84zNut.webp',description:'Tiger & faces · colour',source:'https://www.instagram.com/toxicles/p/DeULc84zNut/'},{id:'work-03',title:'Floral fan',image:'/images/Dd3twCPTbit.webp',description:'Floral fan · colour',source:'https://www.instagram.com/toxicles/p/Dd3twCPTbit/'},{id:'work-04',title:'Traditional sleeve',image:'/images/DeJroMUzVBp.webp',description:'Traditional sleeve · black & grey',source:'https://www.instagram.com/toxicles/reel/DeJroMUzVBp/'}],
+ work:[{id:'work-01',title:'',image:'/images/DeyvG4rk-Ye.webp',description:'',source:'https://www.instagram.com/toxicles/p/DeyvG4rk-Ye/'},{id:'work-02',title:'',image:'/images/DeULc84zNut.webp',description:'',source:'https://www.instagram.com/toxicles/p/DeULc84zNut/'},{id:'work-03',title:'',image:'/images/Dd3twCPTbit.webp',description:'',source:'https://www.instagram.com/toxicles/p/Dd3twCPTbit/'},{id:'work-04',title:'',image:'/images/DeJroMUzVBp.webp',description:'',source:'https://www.instagram.com/toxicles/reel/DeJroMUzVBp/'}],
  artworks:[
  {
   "id": "artwork-01",
-  "title": "Tattoo Study",
+  "title": "",
   "image": "/images/uploads/artwork-01.webp",
   "category": "Paintings & Drawings",
   "description": "",
@@ -166,7 +166,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "artwork-02",
-  "title": "Robot & Serpent",
+  "title": "",
   "image": "/images/uploads/artwork-02.webp",
   "category": "Paintings & Drawings",
   "description": "",
@@ -175,7 +175,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "artwork-03",
-  "title": "Dragon in the Storm",
+  "title": "",
   "image": "/images/uploads/artwork-03.webp",
   "category": "Paintings & Drawings",
   "description": "",
@@ -184,7 +184,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "artwork-04",
-  "title": "Toad & Warrior",
+  "title": "",
   "image": "/images/uploads/artwork-04.webp",
   "category": "Paintings & Drawings",
   "description": "",
@@ -193,7 +193,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "artwork-05",
-  "title": "Roaring Kaiju",
+  "title": "",
   "image": "/images/uploads/artwork-05.webp",
   "category": "Paintings & Drawings",
   "description": "",
@@ -202,7 +202,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "artwork-06",
-  "title": "Skull & Swallow",
+  "title": "",
   "image": "/images/uploads/artwork-06.webp",
   "category": "Paintings & Drawings",
   "description": "",
@@ -211,7 +211,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "artwork-07",
-  "title": "Blue Portrait",
+  "title": "",
   "image": "/images/uploads/artwork-07.webp",
   "category": "Paintings & Drawings",
   "description": "",
@@ -220,7 +220,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "artwork-08",
-  "title": "Saxophone Player",
+  "title": "",
   "image": "/images/uploads/artwork-08.webp",
   "category": "Paintings & Drawings",
   "description": "",
@@ -229,7 +229,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "artwork-09",
-  "title": "Robot Tattoo Session",
+  "title": "",
   "image": "/images/uploads/artwork-09.webp",
   "category": "Paintings & Drawings",
   "description": "",
@@ -238,7 +238,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "artwork-10",
-  "title": "Twin Dragons",
+  "title": "",
   "image": "/images/uploads/artwork-10.webp",
   "category": "Paintings & Drawings",
   "description": "",
@@ -247,7 +247,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "artwork-11",
-  "title": "Seated Figure",
+  "title": "",
   "image": "/images/uploads/artwork-11.webp",
   "category": "Paintings & Drawings",
   "description": "",
@@ -256,7 +256,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "artwork-12",
-  "title": "Hannya & Serpent",
+  "title": "",
   "image": "/images/uploads/artwork-12.webp",
   "category": "Paintings & Drawings",
   "description": "",
@@ -265,7 +265,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "artwork-13",
-  "title": "Coiled Dragon",
+  "title": "",
   "image": "/images/uploads/artwork-13.webp",
   "category": "Paintings & Drawings",
   "description": "",
@@ -274,7 +274,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "artwork-14",
-  "title": "Red Oni",
+  "title": "",
   "image": "/images/uploads/artwork-14.webp",
   "category": "Paintings & Drawings",
   "description": "",
@@ -283,7 +283,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "artwork-15",
-  "title": "Kappa",
+  "title": "",
   "image": "/images/uploads/artwork-15.webp",
   "category": "Paintings & Drawings",
   "description": "",
@@ -292,7 +292,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "object-helmet-1",
-  "title": "Traditional Flash Helmet",
+  "title": "",
   "image": "/images/uploads/object-helmet-1-1.webp",
   "category": "Objects",
   "description": "",
@@ -305,7 +305,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "object-helmet-2",
-  "title": "Tiger & Oni Helmet",
+  "title": "",
   "image": "/images/uploads/object-helmet-2-1.webp",
   "category": "Objects",
   "description": "",
@@ -317,7 +317,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "object-lucky-cat-1",
-  "title": "Blue & White Lucky Cat",
+  "title": "",
   "image": "/images/uploads/object-lucky-cat-1-1.webp",
   "category": "Objects",
   "description": "",
@@ -330,7 +330,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "object-lucky-cat-2",
-  "title": "Gold & Teal Lucky Cat",
+  "title": "",
   "image": "/images/uploads/object-lucky-cat-2-1.webp",
   "category": "Objects",
   "description": "",
@@ -341,7 +341,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "object-mirror",
-  "title": "Eagle & Rose Mirror",
+  "title": "",
   "image": "/images/uploads/object-mirror.webp",
   "category": "Objects",
   "description": "",
@@ -350,7 +350,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "object-table-1",
-  "title": "Golden Tiger Table",
+  "title": "",
   "image": "/images/uploads/object-table-1.webp",
   "category": "Objects",
   "description": "",
@@ -359,7 +359,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "object-table-2",
-  "title": "Purple Panther Table",
+  "title": "",
   "image": "/images/uploads/object-table-2.webp",
   "category": "Objects",
   "description": "",
@@ -368,7 +368,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "object-table-3",
-  "title": "Three Horses Table",
+  "title": "",
   "image": "/images/uploads/object-table-3.webp",
   "category": "Objects",
   "description": "",
@@ -377,7 +377,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "object-table-4",
-  "title": "Blue Tiger Table",
+  "title": "",
   "image": "/images/uploads/object-table-4.webp",
   "category": "Objects",
   "description": "",
@@ -386,7 +386,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "object-wall-art-1",
-  "title": "Crying Face Wall Art",
+  "title": "",
   "image": "/images/uploads/object-wall-art-1.webp",
   "category": "Objects",
   "description": "",
@@ -395,7 +395,7 @@ export const defaultContent:SiteContent={
  },
  {
   "id": "object-wall-art-2",
-  "title": "Panther & Dagger Wall Art",
+  "title": "",
   "image": "/images/uploads/object-wall-art-2.webp",
   "category": "Objects",
   "description": "",
@@ -407,10 +407,10 @@ export const defaultContent:SiteContent={
  faqs:[],
  events:[],
  merch:[
- {id:'merch-rooster',title:'Rooster tee',image:'/images/merch-DWWF_ilkvzg.webp',category:'Merch',description:'Black graphic tee by Goodbye Sunday.',price:null,status:'Check shop',sizes:'',orderUrl:'https://shopee.ph/goodbyesunday',gallery:[],source:'https://www.instagram.com/goodbye.sunday.ph/p/DWWF_ilkvzg/',mockup:'none'},
- {id:'merch-tiger',title:'Frog tee',image:'/images/merch-DWWFuAHktFK.webp',category:'Merch',description:'White frog graphic tee by Goodbye Sunday.',price:null,status:'Check shop',sizes:'',orderUrl:'https://shopee.ph/goodbyesunday',gallery:[],source:'https://www.instagram.com/goodbye.sunday.ph/p/DWWFuAHktFK/',mockup:'none'},
- {id:'merch-jacket',title:'Tiger & snake jacket',image:'/images/merch-DQ35rQ6EinE.webp',category:'Merch',description:'Black jacket with tiger-and-snake artwork.',price:null,status:'Check shop',sizes:'',orderUrl:'https://shopee.ph/goodbyesunday',gallery:['/images/merch-DQ35l7WEnrS.webp','/images/merch-DQ357ZiEicI.webp','/images/merch-DQ352Z7kvSq.webp','/images/merch-DQ35xddEktW.webp'],source:'https://www.instagram.com/goodbye.sunday.ph/p/DQ35rQ6EinE/',mockup:'none'},
- {id:'merch-pouch',title:'Denim pouch',image:'/images/merch-DQ35eaJEh69.webp',category:'Merch',description:'Zip pouch by Goodbye Sunday.',price:null,status:'Check shop',sizes:'',orderUrl:'https://shopee.ph/goodbyesunday',gallery:[],source:'https://www.instagram.com/goodbye.sunday.ph/p/DQ35eaJEh69/',mockup:'none'}]
+ {id:'merch-rooster',title:'',image:'/images/merch-DWWF_ilkvzg.webp',category:'Merch',description:'Black graphic tee by Goodbye Sunday.',price:null,status:'Check shop',sizes:'',orderUrl:'https://shopee.ph/goodbyesunday',gallery:[],source:'https://www.instagram.com/goodbye.sunday.ph/p/DWWF_ilkvzg/',mockup:'none'},
+ {id:'merch-tiger',title:'',image:'/images/merch-DWWFuAHktFK.webp',category:'Merch',description:'White frog graphic tee by Goodbye Sunday.',price:null,status:'Check shop',sizes:'',orderUrl:'https://shopee.ph/goodbyesunday',gallery:[],source:'https://www.instagram.com/goodbye.sunday.ph/p/DWWFuAHktFK/',mockup:'none'},
+ {id:'merch-jacket',title:'',image:'/images/merch-DQ35rQ6EinE.webp',category:'Merch',description:'Black jacket with tiger-and-snake artwork.',price:null,status:'Check shop',sizes:'',orderUrl:'https://shopee.ph/goodbyesunday',gallery:['/images/merch-DQ35l7WEnrS.webp','/images/merch-DQ357ZiEicI.webp','/images/merch-DQ352Z7kvSq.webp','/images/merch-DQ35xddEktW.webp'],source:'https://www.instagram.com/goodbye.sunday.ph/p/DQ35rQ6EinE/',mockup:'none'},
+ {id:'merch-pouch',title:'',image:'/images/merch-DQ35eaJEh69.webp',category:'Merch',description:'Zip pouch by Goodbye Sunday.',price:null,status:'Check shop',sizes:'',orderUrl:'https://shopee.ph/goodbyesunday',gallery:[],source:'https://www.instagram.com/goodbye.sunday.ph/p/DQ35eaJEh69/',mockup:'none'}]
 
 };
 export function formatPrice(value:number|null,currency:string){return value===null?'Price on request':new Intl.NumberFormat('en-PH',{style:'currency',currency,maximumFractionDigits:0}).format(value);}
